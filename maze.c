@@ -3,10 +3,15 @@
 
 #include <stdio.h>
 
-#define TAM 5
+#define TAM 10
 
 int maze[TAM][TAM] = {
     {0, 1, 0, 1, 1},
+    {0, 0, 0, 0, 0},
+    {1, 0, 1, 0, 1},
+    {0, 0, 1, 0, 0},
+    {1, 0, 0, 1, 0},
+    {0, 1, 0, 1, 0},
     {0, 0, 0, 0, 0},
     {1, 0, 1, 0, 1},
     {0, 0, 1, 0, 0},
@@ -30,18 +35,25 @@ void printMaze()
 
 void printSolucion()
 {
-    int i, j /*, count*/;
+    int i, j , cont=0;
+    int* contador;
     for (int i = 0; i < TAM; i++)
     {
         for (int j = 0; j < TAM; j++)
         {
             printf("%d\t", solucion[i][j]);
-            // count++;
+            
+            if (solucion[i][j] == 1)
+            {
+                cont++;
+                contador = &cont; 
+            }
         }
         printf("\n\n");
     }
 
-    // printf("%d", count);
+    
+    printf("El numero de movimientos es %d\n", *contador);
 }
 
 //function to solve the maze using Backtracking
@@ -49,6 +61,7 @@ int solveMaze(int r, int c)
 {
     //if destination is reached, maze is solved
     //destination is the last cell(maze[SIZE-1][SIZE-1])
+    
     if ((r == TAM - 1) && (c == TAM - 1))
     {
         solucion[r][c] = 1;
@@ -86,14 +99,14 @@ int main(int argc, char const *argv[])
     printMaze();
 
     printf("Solucion: \n");
-    int i, j;
+    /* int i, j;
     for (int i = 0; i < TAM; i++)
     {
         for (int j = 0; j < TAM; j++)
         {
             solucion[i][j] = 0;
         }
-    }
+    } */
 
     if (solveMaze(0, 0))
     {
