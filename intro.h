@@ -11,15 +11,17 @@ const char gameModeQuestion[] = "Which game mode yo want?";
 const char gameModeManual[] = "Manual [1]";
 const char gameModeAutomatic[] = "Automatic[2]";
 
-int introduction(void)
+int introduction()
 {
     char answer;
-    printf("Welcome to ");
-    printf("%s,%s %s \n", textDecorationStart, gameTitle, textDecorationEnd);
+    char answer2;
+    printf("Welcome to \n ");
+    printf("%s %s %s \n", textDecorationStart, gameTitle, textDecorationEnd);
     printf("%s \n", historyIntroduction);
 
     do
     {
+
         printf("%s \n", introQuestion);
         scanf("%c", &answer);
         answer = tolower(answer);
@@ -31,18 +33,17 @@ int introduction(void)
 
     do
     {
-
-        printf("%s", gameModeQuestion);
-        printf("%s \n %s \n", gameModeManual, gameModeAutomatic);
-        scanf("%c", &answer);
-        if (answer == '1')
+        system("cls");
+        printf("%s \n", gameModeQuestion);
+        printf("%s \n%s \n", gameModeManual, gameModeAutomatic);
+        scanf("%c", &answer2);
+        if (answer2 == '1')
         {
             return 1;
         }
-        if (answer = '2')
+        if (answer2 == '2')
         {
             return 2;
         }
-
-    } while (answer != '1' || answer != '2');
+    } while (answer2 != '1' || answer2 != '2');
 }
