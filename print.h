@@ -3,7 +3,7 @@
 
 void printMaze()
 {
-    printf("Original Maze: \n");
+    printf("Revelead Treasure: \n");
     int i, j;
     for (int i = 0; i < TAM; i++)
     {

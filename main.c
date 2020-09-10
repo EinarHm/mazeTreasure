@@ -1,16 +1,18 @@
 #include <stdio.h>
-#include "intro.h"
 #include "print.h"
+#include "intro.h"
 #include "gameMode.h"
 
 int main(int argc, char const *argv[])
 {
+    system("cls");
     int answer;
     answer = introduction();
 
     if (answer == 1)
     {
         printf("You can move using W[UP] S[DOWN]  D[RIGHT] A[LEFT] \n");
+        system("cls");
         manualMode();
     }
     else if (answer == 2)

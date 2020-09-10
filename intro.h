@@ -21,6 +21,7 @@ int introduction()
 
     do
     {
+
         printf("%s \n", introQuestion);
         scanf("%c", &answer);
         answer = tolower(answer);
@@ -32,6 +33,7 @@ int introduction()
 
     do
     {
+        system("cls");
         printf("%s \n", gameModeQuestion);
         printf("%s \n%s \n", gameModeManual, gameModeAutomatic);
         scanf("%c", &answer2);
@@ -43,6 +45,5 @@ int introduction()
         {
             return 2;
         }
-
-    } while (answer != '1' || answer != '2');
+    } while (answer2 != '1' || answer2 != '2');
 }
