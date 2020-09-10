@@ -1,15 +1,23 @@
 #include <stdio.h>
+#include <unistd.h>
 
 int automaticMode(int r, int c)
 {
+
     if ((r == TAM - 1) && (c == TAM - 1))
     {
         solucion[r][c] = 1;
         return 1;
     }
+
     if (r >= 0 && c >= 0 && r < TAM && c < TAM && solucion[r][c] == 0 && maze[r][c] == 0)
     {
+
         solucion[r][c] = 1;
+        system("cls");
+        printSolucion();
+        sleep(1);
+
         if (automaticMode(r + 1, c))
             return 1;
 
@@ -34,9 +42,7 @@ void manualMode()
     char move;
     int *contador;
     int cont = 0;
-    printf("You can move using W[UP] S[DOWN]  D[RIGHT] A[LEFT] \n");
     printPlayerMaze();
-
     while (playMaze[9][9] != 8)
     {
         scanf("%c", &move);
