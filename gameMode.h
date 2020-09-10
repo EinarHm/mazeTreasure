@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 
 int automaticMode(int r, int c)
 {
@@ -13,6 +14,9 @@ int automaticMode(int r, int c)
     {
 
         solucion[r][c] = 1;
+        system("cls");
+        printSolucion();
+        sleep(1);
 
         if (automaticMode(r + 1, c))
             return 1;
