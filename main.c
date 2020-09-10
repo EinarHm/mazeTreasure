@@ -11,8 +11,8 @@ int main(int argc, char const *argv[])
 
     if (answer == 1)
     {
-        printf("You can move using W[UP] S[DOWN]  D[RIGHT] A[LEFT] \n");
-        system("cls");
+        //printf("You can move using W[UP] S[DOWN]  D[RIGHT] A[LEFT] \n");
+        //system("cls");
         manualMode();
     }
     else if (answer == 2)

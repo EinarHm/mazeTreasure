@@ -42,6 +42,7 @@ void manualMode()
     while (playMaze[9][9] != 8)
     {
         scanf("%c", &move);
+        printf("You can move using W[UP] S[DOWN]  D[RIGHT] A[LEFT] \n");
 
         switch (move)
         {

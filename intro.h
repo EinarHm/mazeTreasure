@@ -7,7 +7,7 @@ const char textDecorationEnd[] = "|---";
 const char gameTitle[] = "Maze Treasure";
 const char historyIntroduction[] = "Every 100 years the king open the maze to let only the most braves to take his treasure[Enter]";
 const char introQuestion[] = "Are you ready [Y/N]";
-const char gameModeQuestion[] = "Which game mode yo want?";
+const char gameModeQuestion[] = "Which game mode you want? \n";
 const char gameModeManual[] = "Manual [1]";
 const char gameModeAutomatic[] = "Automatic[2]";
 
