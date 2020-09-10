@@ -1,8 +1,36 @@
 #include <stdio.h>
-#include <intro.h>
+#include "intro.h"
+#include "print.h"
+#include "gameMode.h"
 
-int main(void)
+int main(int argc, char const *argv[])
 {
+    int answer;
+    answer = introduction();
 
-    return 0;
+    if (answer == 1)
+    {
+        printf("You can move using W[UP] S[DOWN]  D[RIGHT] A[LEFT] \n");
+        manualMode();
+    }
+    else if (answer == 2)
+    {
+        printf("The maze \n");
+        printMaze();
+        printf("Solucion: \n");
+        if (automaticMode(0, 0))
+        {
+            printSolucion();
+        }
+        else
+        {
+            printf("No solution");
+        }
+
+        return 0;
+    }
+    else
+    {
+        return 0;
+    }
 }
