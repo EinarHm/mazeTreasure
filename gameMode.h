@@ -38,6 +38,7 @@ void manualMode()
     char move;
     int *contador;
     int cont = 0;
+    printf("You can move using W[UP] S[DOWN]  D[RIGHT] A[LEFT] \n");
     printPlayerMaze();
     while (playMaze[9][9] != 8)
     {
