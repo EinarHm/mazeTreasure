@@ -38,7 +38,7 @@ void printSolucion()
         {
             printf("%d\t", solucion[i][j]);
 
-            if (solucion[i][j] == 1)
+            if (solucion[i][j] == 7)
             {
                 cont++;
                 contador = &cont;
@@ -46,6 +46,6 @@ void printSolucion()
         }
         printf("\n\n");
     }
-
+    printf("Sigue el numero 7\n");
     printf("El numero de movimientos es %d\n", *contador);
 }

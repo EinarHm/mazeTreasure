@@ -6,29 +6,29 @@ int automaticMode(int r, int c)
 
     if ((r == TAM - 1) && (c == TAM - 1))
     {
-        solucion[r][c] = 1;
-        return 1;
+        solucion[r][c] = 7;
+        return 8;
     }
 
     if (r >= 0 && c >= 0 && r < TAM && c < TAM && solucion[r][c] == 0 && maze[r][c] == 0)
     {
 
-        solucion[r][c] = 1;
+        solucion[r][c] = 7;
         system("cls");
         printSolucion();
         sleep(1);
 
         if (automaticMode(r + 1, c))
-            return 1;
+            return 7;
 
         if (automaticMode(r, c + 1))
-            return 1;
+            return 7;
 
         if (automaticMode(r - 1, c))
-            return 1;
+            return 7;
 
         if (automaticMode(r, c - 1))
-            return 1;
+            return 7;
 
         solucion[r][c] = 0;
         return 0;
@@ -46,7 +46,7 @@ void manualMode()
     while (playMaze[9][9] != 8)
     {
         scanf("%c", &move);
-        printf("You can move using W[UP] S[DOWN]  D[RIGHT] A[LEFT] \n");
+        printf("You can move using W[UP] S[DOWN] D[RIGHT] A[LEFT] \n");
 
         switch (move)
         {
